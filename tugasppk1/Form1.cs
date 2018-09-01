@@ -12,10 +12,6 @@ namespace tugasppk1
 {
     public partial class Form_1086_1 : Form
     {
-        Boolean isBold = false;
-        Boolean isItalic = false;
-        Boolean isUnderline = false;
-        Boolean isStrikeOut = false;
         FontStyle fontStyle = FontStyle.Regular;
         public Form_1086_1()
         {
@@ -36,7 +32,7 @@ namespace tugasppk1
             if (!String.IsNullOrEmpty(richTextBox_1086_1.Text))
             {
                 int index = comboBox_1086_2.SelectedIndex == -1 ? 0 : comboBox_1086_2.SelectedIndex;
-                richTextBox_1086_1.SelectionFont = new Font((String)comboBox_1086_1.SelectedItem, (float)Convert.ToDouble(comboBox_1086_2.Items[index]), fontStyle);
+                fontDialog1.Font = richTextBox_1086_1.SelectionFont = new Font((String)comboBox_1086_1.SelectedItem, (float)Convert.ToDouble(comboBox_1086_2.Items[index]), fontStyle);
             }
         }
 
@@ -44,7 +40,7 @@ namespace tugasppk1
         {
             if (!String.IsNullOrEmpty(richTextBox_1086_1.Text))
             {
-                richTextBox_1086_1.SelectionFont = new Font((String) comboBox_1086_1.SelectedItem, (float)Convert.ToDouble(comboBox_1086_2.SelectedItem), fontStyle);
+                fontDialog1.Font = richTextBox_1086_1.SelectionFont = new Font((String) comboBox_1086_1.SelectedItem, (float)Convert.ToDouble(comboBox_1086_2.SelectedItem), fontStyle);
             }
         }
 
@@ -59,7 +55,7 @@ namespace tugasppk1
             {
                 int index = comboBox_1086_2.SelectedIndex == comboBox_1086_2.MaxDropDownItems - 1 ? comboBox_1086_2.MaxDropDownItems - 1 : comboBox_1086_2.SelectedIndex + 1;
                 comboBox_1086_2.SelectedIndex = index;
-                richTextBox_1086_1.SelectionFont = new Font(fontDialog1.Font.FontFamily, (float) Convert.ToDouble(comboBox_1086_2.Items[index]), fontStyle);
+                fontDialog1.Font = richTextBox_1086_1.SelectionFont = new Font(fontDialog1.Font.FontFamily, (float) Convert.ToDouble(comboBox_1086_2.Items[index]), fontStyle);
             }
         }
 
@@ -69,7 +65,7 @@ namespace tugasppk1
             {
                 int index = comboBox_1086_2.SelectedIndex == 0 ? 0 : comboBox_1086_2.SelectedIndex - 1;
                 comboBox_1086_2.SelectedIndex = index;
-                richTextBox_1086_1.SelectionFont = new Font(fontDialog1.Font.FontFamily, (float)Convert.ToDouble(comboBox_1086_2.Items[index]), fontStyle);
+                fontDialog1.Font = richTextBox_1086_1.SelectionFont = new Font(fontDialog1.Font.FontFamily, (float)Convert.ToDouble(comboBox_1086_2.Items[index]), fontStyle);
             }
         }
 
@@ -172,6 +168,25 @@ namespace tugasppk1
         private void button_1086_16_Click(object sender, EventArgs e)
         {
             richTextBox_1086_1.SelectionIndent += INDENT_SIZE;
+        }
+
+        const int LIST_INDENT_SIZE = 40;
+        private void button_1086_15_Click(object sender, EventArgs e)
+        {
+            Boolean isListed = richTextBox_1086_1.SelectionBullet;
+
+            if (!isListed)
+            {
+                richTextBox_1086_1.SelectionIndent = LIST_INDENT_SIZE;
+                richTextBox_1086_1.SelectionBullet = true;
+                richTextBox_1086_1.BulletIndent = 25;
+            } else
+            {
+                richTextBox_1086_1.SelectionIndent = 0;
+                richTextBox_1086_1.SelectionBullet = false;
+                richTextBox_1086_1.BulletIndent = 0;
+            }
+            
         }
     }
 }

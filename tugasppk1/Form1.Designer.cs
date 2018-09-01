@@ -185,6 +185,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label1.Location = new System.Drawing.Point(287, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 25);
@@ -372,6 +373,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label2.Location = new System.Drawing.Point(151, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 25);
@@ -473,6 +475,7 @@
             this.button_1086_15.Size = new System.Drawing.Size(62, 54);
             this.button_1086_15.TabIndex = 14;
             this.button_1086_15.UseVisualStyleBackColor = true;
+            this.button_1086_15.Click += new System.EventHandler(this.button_1086_15_Click);
             // 
             // fontDialog1
             // 
