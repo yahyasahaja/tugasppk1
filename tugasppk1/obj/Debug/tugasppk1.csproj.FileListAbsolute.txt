@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\bin\Debug\tugasppk1.exe.config
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\bin\Debug\tugasppk1.exe
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\bin\Debug\tugasppk1.pdb
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\obj\Debug\tugasppk1.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\obj\Debug\tugasppk1.Form_1086_1.resources
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\obj\Debug\tugasppk1.Properties.Resources.resources
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\obj\Debug\tugasppk1.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\obj\Debug\tugasppk1.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\obj\Debug\tugasppk1.exe
+\\Mac\Home\Desktop\tugasppk1\tugasppk1\obj\Debug\tugasppk1.pdb
