@@ -188,5 +188,33 @@ namespace tugasppk1
             }
             
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button_1086_25_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText(TextDataFormat.Rtf))
+            {
+                richTextBox_1086_1.SelectedRtf = Clipboard.GetData(DataFormats.Rtf).ToString();
+            }
+        }
+
+        private void button_1086_26_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetData(DataFormats.Rtf, richTextBox_1086_1.SelectedRtf);
+        }
+
+        private void button_1086_27_Click(object sender, EventArgs e)
+        {
+            richTextBox_1086_1.Cut();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
